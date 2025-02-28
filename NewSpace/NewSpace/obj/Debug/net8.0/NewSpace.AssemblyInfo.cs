@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("NewSpace")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bd3788e47b0517af86e7c8b1ee08d60da508e1a1")]
 [assembly: System.Reflection.AssemblyProductAttribute("NewSpace")]
 [assembly: System.Reflection.AssemblyTitleAttribute("NewSpace")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -30,7 +30,7 @@ namespace NewSpace.Controllers
         }
 
         [HttpDelete("delete-Food/{id}")]
-        public ActionResult<bool> DeleteCoctaile(int id)
+        public ActionResult<bool> DeleteFood(int id)
         {
             var result = food.DeleteFood(id);
             if (!result)

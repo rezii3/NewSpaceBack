@@ -24,13 +24,13 @@ public class tea_coffeContoller : ControllerBase
     }
 
     [HttpPost("add-tea-coffe")]
-    public ActionResult<bool> AddFood(string name, decimal price, string img, string description)
+    public ActionResult<bool> AddTC(string name, decimal price, string img, string description)
     {
         return Ok(teaCoffe.AddTC(name, price, img, description));
     }
 
     [HttpDelete("delete-tea-Coffe/{id}")]
-    public ActionResult<bool> DeleteCoctaile(int id)
+    public ActionResult<bool> DeleteTC(int id)
     {
         var result = teaCoffe.DeleteTC(id);
         if (!result)

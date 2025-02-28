@@ -16,32 +16,32 @@ public class IwineService:Iwine
         this._context = context;
         this.mapper = mapper;
     }
-    public List<CoctaileDto> GetAllWine()
+    public List<WineDto> GetAllWine()
     {
-        var Allcoctaile = _context.coctailes.ToList();
-        var MapperCoctaile = mapper.Map<List<CoctaileDto>>(Allcoctaile);
+        var AllWine = _context.wines.ToList();
+        var MapperWine = mapper.Map<List<WineDto>>(AllWine);
 
-        return MapperCoctaile;
+        return MapperWine;
     }
     public bool AddWine(string name, decimal price, string img, string description)
     {
-        var coctaile = new Coctaile
+        var wine = new Wine
         {
             Name = name,
             Price = price,
             Img = img,
             Description = description
         };
-        _context.coctailes.Add(coctaile);
+        _context.wines.Add(wine);
         _context.SaveChanges();
         return true;
     }
     public bool DeleteWine(int id) // ახალი მეთოდი წაშლისთვის
     {
-        var Wine = _context.coctailes.FirstOrDefault(c => c.Id == id); // ვეძებთ ჩანაწერს
+        var Wine = _context.wines.FirstOrDefault(c => c.Id == id); // ვეძებთ ჩანაწერს
         if (Wine == null) return false; // თუ ჩანაწერი არ მოიძებნა, ვაბრუნებთ false-ს
 
-        _context.coctailes.Remove(Wine); // ვშლით ჩანაწერს
+        _context.wines.Remove(Wine); // ვშლით ჩანაწერს
         _context.SaveChanges(); // ვაფიქსირებთ ცვლილებებს მონაცემთა ბაზაში
         return true; // ვაბრუნებთ true-ს წარმატების შემთხვევაში
     }

@@ -6,7 +6,7 @@ using NewSpace.Service.Abstraction;
 using NewSpace.Service.Implementation;
 namespace NewSpace.Service.Implementation;
 
-public class IfoodService:Ifood
+public class IfoodService: Ifood
 {
     private readonly DataContxt _context;
     private readonly IMapper mapper;
@@ -16,33 +16,35 @@ public class IfoodService:Ifood
         this._context = context;
         this.mapper = mapper;
     }
-    public List<CoctaileDto> GetAllFood()
+    public List<FoodDto> GetAllFood()
     {
-        var Allcoctaile = _context.coctailes.ToList();
-        var MapperCoctaile = mapper.Map<List<CoctaileDto>>(Allcoctaile);
+        var Allfood = _context.foods.ToList();
+        var MapperFood = mapper.Map<List<FoodDto>>(Allfood);
 
-        return MapperCoctaile;
+        return MapperFood;
     }
     public bool AddFood(string name, decimal price, string img, string description)
     {
-        var coctaile = new Coctaile
+        var food = new Food
         {
             Name = name,
             Price = price,
             Img = img,
             Description = description
         };
-        _context.coctailes.Add(coctaile);
+        _context.foods.Add(food);
         _context.SaveChanges();
         return true;
     }
     public bool DeleteFood(int id) // ახალი მეთოდი წაშლისთვის
     {
-        var Food = _context.coctailes.FirstOrDefault(c => c.Id == id); // ვეძებთ ჩანაწერს
+        var Food = _context.foods.FirstOrDefault(c => c.Id == id); // ვეძებთ ჩანაწერს
         if (Food == null) return false; // თუ ჩანაწერი არ მოიძებნა, ვაბრუნებთ false-ს
 
-        _context.coctailes.Remove(Food); // ვშლით ჩანაწერს
+        _context.foods.Remove(Food); // ვშლით ჩანაწერს
         _context.SaveChanges(); // ვაფიქსირებთ ცვლილებებს მონაცემთა ბაზაში
         return true; // ვაბრუნებთ true-ს წარმატების შემთხვევაში
     }
+
+
 }

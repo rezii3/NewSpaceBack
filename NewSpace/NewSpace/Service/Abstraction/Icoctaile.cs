@@ -7,4 +7,5 @@ public interface Icoctaile
     List<CoctaileDto> GetAllCoctaile();
     bool AddCoctaile(string name, decimal price, string description, string img);
     bool DeleteCoctaile(int id);
+    bool UpdateCoctaile(int id, string name, decimal price, string description, string img);
 }

@@ -39,4 +39,17 @@ public class CoctaileController : ControllerBase
 
         return Ok($"{id} was successfully deleted.");
     }
+
+    [HttpPut("update-coctaile/{id}")]
+    public ActionResult<bool> UpdateCoctaile(int id, string name, decimal price, string img, string description)
+    {
+        var result = coctaile.UpdateCoctaile(id, name, price, img, description);
+        if (!result)
+        {
+            return NotFound($"Coctaile with ID {id} was not found.");
+        }
+
+        return Ok($"Coctaile {id} was successfully updated.");
+    }
+
 }

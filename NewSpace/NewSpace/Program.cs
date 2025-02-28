@@ -1,4 +1,5 @@
 using NewSpace.Data;
+using NewSpace.Model;
 using NewSpace.Service.Abstraction;
 using NewSpace.Service.Implementation;
 using static Azure.Core.HttpHeader;
@@ -24,6 +25,9 @@ builder.Services.AddDbContext<DataContxt>();
 builder.Services.AddAutoMapper(typeof(Program).Assembly);
 builder.Services.AddScoped<Icoctaile,IcoctaileService>();
 builder.Services.AddScoped<Ifood, IfoodService>();
+builder.Services.AddScoped<Itea_coffe, Itea_coffeService>();
+builder.Services.AddScoped<Iwine, IwineService>();
+
 
 
 var app = builder.Build();

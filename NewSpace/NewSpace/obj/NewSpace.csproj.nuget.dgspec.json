@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\rezkaa\\source\\repos\\NewSpace\\NewSpace\\NewSpace.csproj": {}
+    "C:\\Users\\rezkaa\\Desktop\\NewSpaceBack\\NewSpace\\NewSpace\\NewSpace.csproj": {}
   },
   "projects": {
-    "C:\\Users\\rezkaa\\source\\repos\\NewSpace\\NewSpace\\NewSpace.csproj": {
+    "C:\\Users\\rezkaa\\Desktop\\NewSpaceBack\\NewSpace\\NewSpace\\NewSpace.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\rezkaa\\source\\repos\\NewSpace\\NewSpace\\NewSpace.csproj",
+        "projectUniqueName": "C:\\Users\\rezkaa\\Desktop\\NewSpaceBack\\NewSpace\\NewSpace\\NewSpace.csproj",
         "projectName": "NewSpace",
-        "projectPath": "C:\\Users\\rezkaa\\source\\repos\\NewSpace\\NewSpace\\NewSpace.csproj",
+        "projectPath": "C:\\Users\\rezkaa\\Desktop\\NewSpaceBack\\NewSpace\\NewSpace\\NewSpace.csproj",
         "packagesPath": "C:\\Users\\rezkaa\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\rezkaa\\source\\repos\\NewSpace\\NewSpace\\obj\\",
+        "outputPath": "C:\\Users\\rezkaa\\Desktop\\NewSpaceBack\\NewSpace\\NewSpace\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\rezkaa\\AppData\\Roaming\\NuGet\\NuGet.Config",

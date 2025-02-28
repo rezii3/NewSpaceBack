@@ -45,4 +45,19 @@ public class IcoctaileService : Icoctaile
         _context.SaveChanges(); // ვაფიქსირებთ ცვლილებებს მონაცემთა ბაზაში
         return true; // ვაბრუნებთ true-ს წარმატების შემთხვევაში
     }
+
+    public bool UpdateCoctaile(int id ,string name, decimal price, string img, string description)
+    {
+        var coctaile = _context.coctailes.FirstOrDefault(c => c.Id == id);
+        if (coctaile == null) return false; // თუ კოქტეილი არ მოიძებნა, ვაბრუნებთ false-ს
+
+        // განვაახლებთ ველებს
+        coctaile.Name = name;
+        coctaile.Price = price;
+        coctaile.Img = img;
+        coctaile.Description = description;
+
+        _context.SaveChanges(); // ვაფიქსირებთ ცვლილებებს მონაცემთა ბაზაში
+        return true; // წარმატების შემთხვევაში ვაბრუნებთ true-ს
+    }
 }

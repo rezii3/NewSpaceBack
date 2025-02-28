@@ -4,7 +4,7 @@ namespace NewSpace.Service.Abstraction;
 
 public interface Iwine
 {
-    List<CoctaileDto> GetAllWine();
+    List<WineDto> GetAllWine();
     bool AddWine(string name, decimal price, string description, string img);
     bool DeleteWine(int id);
 }

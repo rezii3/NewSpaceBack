@@ -1,11 +1,10 @@
 ﻿using NewSpace.Dto.Get.Products;
 
-namespace NewSpace.Service.Abstraction
+namespace NewSpace.Service.Abstraction;
+
+public interface Itea_coffe
 {
-    public interface Itea_coffe
-    {
-        List<CoctaileDto> GetAllTC();
-        bool AddTC(string name, decimal price, string description, string img);
-        bool DeleteTC(int id);
-    }
+    List<Tea_CoffeDto> GetAllTC();
+    bool AddTC(string name, decimal price, string description, string img);
+    bool DeleteTC(int id);
 }
